@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Administrative Assistant Projects — Lance Ivan</title>
+  <style>
+    body {
+      font-family: Inter, sans-serif;
+      background: linear-gradient(180deg,#0ea5e9,#0b3b70);
+      margin:0;
+      padding:30px 20px;
+      color:#0b1220;
+    }
+
+    .container {
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    h1 { color:#fff; margin:60px 0 20px 0; }
+
+    .projects {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:18px;
+    }
+
+    .project {
+      border-left:4px solid rgba(11,59,112,0.12);
+      padding:12px;
+      border-radius:10px;
+      background:#fff;
+      min-height:260px;
+      display:flex;
+      flex-direction:column;
+      box-shadow:0 6px 18px rgba(2,6,23,0.08);
+      cursor:pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow:0 12px 28px rgba(2,6,23,0.18);
+    }
+
+    .project strong { margin-top:10px; font-size:1.1rem; }
+    .muted { color:#475569; font-size:0.95rem; margin-top:6px; }
+
+    /* Locked Back button */
+    a.back {
+      position: fixed;
+      top: 15px;
+      left: 20px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      background: rgba(0,0,0,0.4);
+      padding:6px 10px;
+      border-radius:6px;
+      z-index:1000;
+    }
+
+    /* Locked Info note */
+  /* Locked Info note */
+.info-note {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  padding: 6px 10px;
+  border-radius: 6px;
+  z-index: 1000;
+
+  max-width: 220px;     /* keeps it compact */
+  white-space: normal;  /* allows wrapping */
+  word-wrap: break-word; /* breaks long words if needed */
+  line-height: 1.4;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Back button (locked left) -->
+  <a href="portfolio.html" class="back">← Back to Portfolio</a>
+
+  <!-- Info note (locked right) -->
+  <span class="info-note">ⓘ Click to view the full image</span>
+
+  <div class="container">
+    <h1>Administrative Assistant Example Work</h1>
+
+    <div class="projects">
+      <!-- Mock Project 1 -->
+      <div class="project" onclick="openLightbox('https://i.ibb.co/mrJ9hhdN/Screenshot-2025-09-10-at-6-11-58-PM.png')">
+        <img src="https://i.ibb.co/mrJ9hhdN/Screenshot-2025-09-10-at-6-11-58-PM.png" alt="Company Calendar" style="width:100%;border-radius:8px;object-fit:cover;aspect-ratio:2/1;">
+        <strong>Sample Company Calendar</strong>
+        <div class="muted">Created with Google Calendar to organize schedules efficiently.</div>
+      </div>
+
+      <!-- Mock Project 2 -->
+      <div class="project" onclick="openLightbox('https://i.ibb.co/JjCK41dm/Lance-Ivan-R-2.jpg')">
+        <img src="https://i.ibb.co/JjCK41dm/Lance-Ivan-R-2.jpg" alt="Business Letter" style="width:100%;border-radius:8px;object-fit:cover;object-position:top center;aspect-ratio:2/1;">
+        <strong>Professional Business Letter</strong>
+        <div class="muted">Formal letter made using Microsoft Word for professional communication.</div>
+      </div>
+
+      <!-- Mock Project 3 -->
+      <div class="project" onclick="openLightbox('https://i.ibb.co/V0DffYp8/Zoom-meeting-with-Mr-1.jpg')">
+        <img src="https://i.ibb.co/V0DffYp8/Zoom-meeting-with-Mr-1.jpg" alt="Meeting Minutes" style="width:100%;border-radius:8px;object-fit:cover;aspect-ratio:2/1;">
+        <strong>Meeting Minutes</strong>
+        <div class="muted">Official written record of meetings, documenting agendas, participants, and decisions.</div>
+      </div>
+
+      <!-- Mock Project 4 -->
+      <div class="project" onclick="openLightbox('https://i.ibb.co/1GwqQp0y/Screenshot-2025-09-11-at-8-10-11-PM.png')">
+        <img src="https://i.ibb.co/1GwqQp0y/Screenshot-2025-09-11-at-8-10-11-PM.png" alt="Inventory Tracker" style="width:100%;border-radius:8px;object-fit:cover;aspect-ratio:2/1;">
+        <strong>Office Inventory Tracker</strong>
+        <div class="muted">Excel tracker to monitor and manage office supplies.</div>
+      </div>
+
+      <!-- Mock Project 5 -->
+      <div class="project" onclick="openLightbox('https://i.ibb.co/3w1KQ6y/travel-itinerary-proj.jpg')">
+        <img src="https://i.ibb.co/3w1KQ6y/travel-itinerary-proj.jpg" alt="Travel Itinerary" style="width:100%;border-radius:8px;object-fit:cover;aspect-ratio:2/1;">
+        <strong>Travel Itinerary Planner</strong>
+        <div class="muted">An organized schedule of travel destinations, activities, and arrangements, prepared in Microsoft Word.</div>
+      </div>
+
+      <!-- Mock Project 6 -->
+      <div class="project" onclick="openLightbox('https://i.ibb.co/RG6tvL8p/Screenshot-2025-09-11-at-11-59-51-PM.png')">
+        <img src="https://i.ibb.co/RG6tvL8p/Screenshot-2025-09-11-at-11-59-51-PM.png" alt="Expense Report" style="width:100%;border-radius:8px;object-fit:cover;aspect-ratio:2/1;">
+        <strong>Expense Report</strong>
+        <div class="muted">A structured Excel report that consolidates and categorizes executive expenses, providing clear summaries, totals, and insights for accurate financial tracking.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single Lightbox -->
+  <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+       background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999;">
+    <img id="lightbox-img" src="" alt="Full Image" 
+         style="max-width:90%; max-height:90%; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+    }
+
+    lightbox.onclick = () => {
+      lightbox.style.display = 'none';
+    };
+  </script>
+</body>
+</html>
